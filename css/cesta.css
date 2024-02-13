@@ -23,6 +23,7 @@ h1{
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    gap: 20px;
 
     & p{
         width: 100%;
