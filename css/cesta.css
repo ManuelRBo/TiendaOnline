@@ -1,0 +1,57 @@
+main{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.contenedor-cesta{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.productos{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+
+    & p{
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    & .numeroCantidad{
+        display: flex;
+        font-weight: bold;
+    }
+}
+
+.productos::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 170px;
+}
+
+.total{
+    display: flex;
+    flex-direction: column;
+
+    & p{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+}
+
