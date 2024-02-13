@@ -1,0 +1,252 @@
+.libro{
+    width: 280px;
+    height: 380px;
+    background-color: #432800;
+}
+
+.flechaAtras{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 20px;
+
+    & img{
+        cursor: pointer;
+    
+    }
+}
+
+main{
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.detalles-anadir{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content:  space-between;
+    flex-wrap: wrap;
+}
+
+.detalles{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.titulo-genero-sinopsis{
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+
+    & h2{
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    & h3{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+}
+
+.generos{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    & p{
+        font-size: 0.8rem;
+        margin: 0;
+        background-color: #c3733899;
+        padding: 5px;
+        
+    }
+}
+
+.sinopsis{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: justify;
+    font-size: 0.9rem;
+    gap: 5px;
+
+    & h3{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    & p{
+        margin: 0;
+    }
+}
+
+.anadir{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & p{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    & button{
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #65371F;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 1rem;
+
+        &:hover{
+            background-color: #432800;
+        }
+    }
+}
+
+.precio-cantidad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & p{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    & select{
+        border: 1px solid rgba(195, 115, 56, 0.6);
+        outline: none;
+        width: 50px;
+        padding: 5px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+}
+
+.precio p{
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cantidad{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.envio{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+
+    & p{
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
+.recogida{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+
+    & p{
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
+.fichaTecnica{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+    & h2{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    & p{
+        margin: 0;
+    }
+}
+
+.fichaTecnica::before{
+    content: '';
+    width: 40%;
+    height: 1px;
+    background-color: rgba(195, 115, 56, 0.6);
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.fichaTecnica::after{
+    content: '';
+    width: 40%;
+    height: 1px;
+    background-color: rgba(195, 115, 56, 0.6);
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+.ficha{
+    width: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.65fr;
+    place-items: center;
+    position: relative;
+}
+
+.ficha::before{
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: rgba(195, 115, 56, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+}
+
+.infoFicha{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+
+
+    & p{
+        font-size: 0.8rem;
+        margin: 0;
+    }
+}
