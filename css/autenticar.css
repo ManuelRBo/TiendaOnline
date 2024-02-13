@@ -1,0 +1,83 @@
+main{
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.iniciarSesion{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    font-size: 1.5rem;
+    color: rgb(40, 33, 25);
+    margin-top: 0;
+    text-align: center;
+}
+
+.registrarse{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+    & input{
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid rgb(195, 115, 56);
+        border-radius: 10px;
+        outline: none;
+    }
+
+    & input[type="submit"]{
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(195, 115, 56);
+        color: white;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover{
+            background-color: rgba(195, 115, 56, 0.8);
+        }
+    }
+}
+
+.requisitos{
+    font-size: 0.9rem;
+    color: red;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+    
+    & p{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        gap: 5px;
+    }
+}
