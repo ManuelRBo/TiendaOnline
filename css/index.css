@@ -58,10 +58,14 @@ main{
     width: 90%;
     height: 100px;
     position: absolute;
+    bottom: -60px;
+    z-index: -1;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -80px;
-    z-index: -1;
+
+    & img{
+        width: 100%;
+    }
 }
 
 /* Seccion Ultimas Novedades */
