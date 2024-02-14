@@ -89,25 +89,33 @@ h2{
     top: 130px;
 }
 
-#contraseñaRegistro{
+.contraseñaRegistro{
     position: relative;
     width: 100%;
+
+    & input{
+        width: 100%;
+    }
 }
 
-#contraseñaConfirmacion{
+.contraseñaConfirmacion{
     position: relative;
     width: 100%;
+
+    & input{
+        width: 100%;
+    }
 }
 
 
 #ojoRegistro{
     position: absolute;
-    top: 422px;
-    left: 1232px;
+    right: 10px;
+    top: 10px;
 }
 
 #ojoConfirmacion{
     position: absolute;
-    top: 472px;
-    left: 1232px;
+    right: 10px;
+    top: 10px;
 }
