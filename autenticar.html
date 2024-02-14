@@ -35,21 +35,24 @@
     <main>
       <section class="iniciarSesion">
         <h2>Iniciar Sesion</h2>
-        <form action="" class="formulario">
-          <input type="email" placeholder="Correo electrónico" />
-          <input type="password" placeholder="Contraseña" />
+        <form action="" class="formulario" id="iniciarSesion">
+          <input type="text" required placeholder="Usuario" name="usuario"/>
+          <input type="password" required placeholder="Contraseña" name="contraseña" id="contraseñaIniciarSesion"/>
+          <img src="img/iconos/contraseñaOFF.svg" alt="" id="ojoIniciarSesion" width="20px">
           <input type="submit" value="Iniciar Sesion" />
         </form>
       </section>
       <section class="registrarse">
         <h2>Registrarse</h2>
-        <form action="" class="formulario">
-          <input type="text" placeholder="Nombre" />
-          <input type="text" placeholder="Apellidos" />
-          <input type="email" placeholder="Correo electrónico" />
-          <input type="text" placeholder="Usuario" />
-          <input type="password" placeholder="Contraseña" />
-          <input type="password" placeholder="Repetir Contraseña" />
+        <form action="" class="formulario" id="registro">
+          <input type="text" required placeholder="Nombre" name="nombre"/>
+          <input type="text" required placeholder="Apellidos" name="apellidos"/>
+          <input type="email" required placeholder="Correo electrónico" name="email" id="emailRegistro"/>
+          <input type="text" required placeholder="Usuario" name="usuario"/>
+          <input type="password" required placeholder="Contraseña" name="contraseña" id="contraseñaRegistro"/>
+          <img src="./img/iconos/contraseñaOFF.svg" alt="No ver contraseña" id="ojoRegistro" width="20px">
+          <input type="password" required placeholder="Repetir Contraseña" name="confirmarContraseña" id="contraseñaConfirmacion"/>
+          <img src="./img/iconos/contraseñaOFF.svg" alt="No ver contraseña" id="ojoConfirmacion" width="20px">
           <div class="requisitos">
             <p><img src="./img/iconos/error.svg" alt="" width="15px">La contraseña debe tener al menos 8 caracteres</p>
             <p><img src="./img/iconos/error.svg" alt="" width="15px">La contraseña debe tener al menos una mayuscula</p>
@@ -131,5 +134,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/autenticar.js"></script>
   </body>
 </html>

@@ -17,6 +17,7 @@ main{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 h2{
@@ -33,6 +34,7 @@ h2{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .formulario{
@@ -80,4 +82,22 @@ h2{
         margin: 0;
         gap: 5px;
     }
+}
+
+#ojoIniciarSesion{
+    position: absolute;
+    right: 30px;
+    top: 130px;
+}
+
+#ojoRegistro{
+    position: absolute;
+    right: 30px;
+    bottom: 130px;
+}
+
+#ojoConfirmacion{
+    position: absolute;
+    right: 30px;
+    bottom: 78px;
 }
