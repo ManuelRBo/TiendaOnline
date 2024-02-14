@@ -13,7 +13,7 @@ ojoContraseñaIniciarSesion.addEventListener('click', function() {
 
 
 let inputEmail = document.getElementById('emailRegistro');
-let expresionEmail = /\w+@\w+\.+[a-z]/;
+let expresionEmail = /\w+@\w+\.+[a-z]{2,3}$/;
 inputEmail.addEventListener('keyup', function() {
     if(expresionEmail.test(inputEmail.value)) {
         inputEmail.style.border = '2px solid green';
@@ -34,10 +34,10 @@ inputContraseñaRegistro.addEventListener('blur', function() {
     requisitosContraseña.style.display = 'none';
 });
 
-inputContraseñaIniciarSesion.addEventListener('keyup', function() {
-    if(expresionContraseña.test(inputContraseñaIniciarSesion.value)) {
-        inputContraseñaIniciarSesion.style.border = '2px solid green';
+inputContraseñaRegistro.addEventListener('keyup', function() {
+    if(expresionContraseña.test(inputContraseñaRegistro.value)) {
+        inputContraseñaRegistro.style.border = '2px solid green';
     } else {
-        inputContraseñaIniciarSesion.style.border = '2px solid red';
+        inputContraseñaRegistro.style.border = '2px solid red';
     }
 });

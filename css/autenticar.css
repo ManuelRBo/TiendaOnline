@@ -34,7 +34,6 @@ h2{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 .formulario{
@@ -90,14 +89,25 @@ h2{
     top: 130px;
 }
 
+#contraseñaRegistro{
+    position: relative;
+    width: 100%;
+}
+
+#contraseñaConfirmacion{
+    position: relative;
+    width: 100%;
+}
+
+
 #ojoRegistro{
     position: absolute;
-    right: 30px;
-    bottom: 130px;
+    top: 422px;
+    left: 1232px;
 }
 
 #ojoConfirmacion{
     position: absolute;
-    right: 30px;
-    bottom: 78px;
+    top: 472px;
+    left: 1232px;
 }
