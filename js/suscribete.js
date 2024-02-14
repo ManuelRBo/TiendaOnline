@@ -16,7 +16,6 @@ formulario.addEventListener('submit', function(e){
         document.getElementById('mensaje').style.color = 'red'
         formulario.email.style.border = '1px solid red'
     }
-
     setTimeout(() =>{
         document.getElementById('mensaje').style.display = 'none'
         document.getElementById('mensaje').innerHTML = ''

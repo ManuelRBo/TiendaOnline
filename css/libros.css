@@ -9,6 +9,14 @@
     }
 }
 
+.puntuacion{
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
 .detalles{
     margin-top: 5px;
     display: flex;
