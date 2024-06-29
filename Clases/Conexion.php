@@ -15,10 +15,10 @@ class Conexion{
     public static function obtenerConexion() {
         if (!isset(self::$conexion)) {
             // Configuración de conexión a la base de datos
-            $host = 'localhost';
-            $usuario = 'root';
-            $contrasena = '';
-            $nombreDB = 'tiendaonline';
+            $host = 'recursing-shaw.194-164-171-108.plesk.page:3306';
+            $usuario = 'manuel';
+            $contrasena = '4O$6j83yd';
+            $nombreDB = 'tiendaLibros';
 
             // Intentar establecer la conexión
             try {
