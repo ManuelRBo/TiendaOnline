@@ -1,12 +1,6 @@
 .ultimo-libro{
     display: flex;
-    gap: 20px;
-
-    & .libro{
-        background-color: #432800;
-        width: 170px;
-        height: 240px;
-    }
+    gap: 10px;
 }
 
 .puntuacion{
@@ -17,7 +11,7 @@
 }
 
 .detalles{
-    margin-top: 5px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -27,13 +21,19 @@
         font-size: 1rem;
     }
 
-    & .titulo{
+    & .tituloLibro{
         font-size: 1.2rem;
         margin: 0;
+        font-weight: 500;
     }
 
     & .autor{
         font-size: 1rem;
+        margin: 0;
+    }
+
+    & .precio{
+        font-size: 0.9rem;
         margin: 0;
     }
 
@@ -62,6 +62,7 @@
         border-radius: 20px;
         color: #9F4D27;
         transition: all 0.3s ease-in-out;
+        cursor: pointer;
     }
 
     & .comprar:hover{

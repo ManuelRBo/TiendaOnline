@@ -28,13 +28,26 @@ h1{
     & p{
         width: 100%;
         font-size: 1.5rem;
-        text-align: center;
     }
 
     & .numeroCantidad{
         display: flex;
         font-weight: bold;
+        text-align: center;
     }
+
+    .titulo{
+        margin: 0;
+    }
+
+    .detalles{
+        width: 300px;
+
+        & .ficha-tecnica{
+            width: 150px;
+        }
+    }
+
 }
 
 .producto{
@@ -49,7 +62,7 @@ h1{
     width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 
     & p{
         margin: 0;
@@ -58,26 +71,26 @@ h1{
     & .subtotal{
         display: flex;
         justify-content: space-between;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #717171;
     }
 
     & .envio{
         display: flex;
         justify-content: space-between;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #717171;
     }
 
     & .total{
         display: flex;
         justify-content: space-between;
-        font-size: 2rem;
+        font-size: 1.7rem;
         color: #000;
         font-weight: bold;
     }
 
-    & .comprar{
+    & .comprar, #pedido{
         width: 100%;
         padding: 10px;
         text-decoration: none;

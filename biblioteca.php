@@ -1,6 +1,14 @@
 <?php
+
+/**
+ * Descripcion: Biblioteca de libros
+ * Autor: Manuel Rodrigo Borriño
+ * Fecha: 21 de febrero del 2024
+ */
+
 require_once('./Clases/Autoload.php');
 session_start();
+// Se guarda la ultima url visitada
 $_SESSION['ultima_url'] = $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
@@ -14,6 +22,7 @@ $_SESSION['ultima_url'] = $_SERVER['REQUEST_URI'];
   <link rel="stylesheet" href="./css/footer.css" />
   <link rel="stylesheet" href="./css/biblioteca.css" />
   <link rel="stylesheet" href="./css/libros.css" />
+  <link rel="shortcut icon" href="./img/logo/logo-b&n.svg" type="image/x-icon">
   <title>Biblioteca</title>
 </head>
 
@@ -28,7 +37,7 @@ $_SESSION['ultima_url'] = $_SERVER['REQUEST_URI'];
         <aside class="filtros">
           <h2>Filtros</h2>
           <div class="puntuacionFiltro">
-            <h3>Puntuacion</h3>
+            <h3>Puntuación</h3>
             <div class="puntuacion">
               <div class="estrella" data-estrella="1"><svg width="25" height="24" viewBox="0 0 25 24" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.29077 20.2911L12.5008 17.1485L17.7109 20.3325L16.3463 14.3781L20.9362 10.4085L14.8991 9.87099L12.5008 4.24744L10.1025 9.82964L4.0655 10.3672L8.65531 14.3781L7.29077 20.2911ZM4.76844 23.7612L6.81938 14.9735L0 9.0655L8.9828 8.28812L12.5008 0L16.0189 8.28647L25 9.06384L18.1823 14.9719L20.2332 23.7595L12.5008 19.0953L4.76844 23.7612Z" fill="black" />
@@ -69,8 +78,8 @@ $_SESSION['ultima_url'] = $_SERVER['REQUEST_URI'];
             <div>
               <select id="ordenar">
                 <option value="default" selected disabled>Elige el orden</option>
-                <option value="0">Mas reciente</option>
-                <option value="1">Mas antiguo</option>
+                <option value="0">Más reciente</option>
+                <option value="1">Más antiguo</option>
                 <option value="2">Precio ascendente</option>
                 <option value="3">Precio descendente</option>
               </select>

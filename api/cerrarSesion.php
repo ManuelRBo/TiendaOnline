@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Descripcion: Cierra la sesión del usuario
+ * Autor: Manuel Rodrigo Borriño
+ * Fecha: 21 de febrero del 2024
+ */
+
 session_start();
 
 // Destruir la sesión

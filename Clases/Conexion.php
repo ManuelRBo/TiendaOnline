@@ -1,16 +1,24 @@
 <?php
 
+/**
+ * Descripcion: Clase que gestiona la conexión a la base de datos
+ * Autor: Manuel Rodrigo Borriño
+ * Fecha: 21 de febrero del 2024
+ */
+
 
 class Conexion{
+    // Variable que almacena la conexión
     private static $conexion;
 
+    // Método para obtener la conexión a la base de datos
     public static function obtenerConexion() {
         if (!isset(self::$conexion)) {
             // Configuración de conexión a la base de datos
-            $host = 'recursing-shaw.194-164-171-108.plesk.page:3306';
-            $usuario = 'manuel';
-            $contrasena = '@41Gajl01';
-            $nombreDB = 'tiendaLibros';
+            $host = 'localhost';
+            $usuario = 'root';
+            $contrasena = '';
+            $nombreDB = 'tiendaonline';
 
             // Intentar establecer la conexión
             try {

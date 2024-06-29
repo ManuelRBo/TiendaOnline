@@ -1,12 +1,24 @@
 <?php
+
+/**
+ * Descripcion: Ficha tecnica de un libro
+ * Autor: Manuel Rodrigo Borriño
+ * Fecha: 21 de febrero del 2024
+ */
+
 require_once('Clases/Autoload.php');
 session_start();
+// Se guarda la ultima url visitada
 $_SESSION['ultima_url'] = $_SERVER['REQUEST_URI'];
+
 if($_GET['id'] <= 0|| $_GET['id'] > Producto::librosTotales()) {
+  // Si el id no es valido se redirige a la biblioteca
     header('Location: ./biblioteca.php');
 }else{
+  // Si el id es valido se obtiene la ficha tecnica del libro
   $libro = Producto::fichaTecnica($_GET['id']);
 }
+// Se obtienen las categorias del libro
 $categorias = explode(',', $libro['categorias']);
 ?>
 <!DOCTYPE html>
@@ -18,7 +30,8 @@ $categorias = explode(',', $libro['categorias']);
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/fichaTecnica.css" />
-    <title>Ficha Tecnica</title>
+    <link rel="shortcut icon" href="./img/logo/logo-b&n.svg" type="image/x-icon">
+    <title><?php echo strtoupper($libro['titulo']) ?></title>
   </head>
   <body>
     <?php include('./includes/header.php') ?>
@@ -31,7 +44,9 @@ $categorias = explode(',', $libro['categorias']);
             <h2><?php echo $libro['titulo']?></h2>
             <h3><?php echo $libro['nombreAutor']?></h3>
             <div class="generos">
-              <?php foreach($categorias as $categoria){
+              <?php 
+              // Se recorren las categorias del libro
+              foreach($categorias as $categoria){
                   echo "<p>$categoria</p>";
               }?>
             </div>
@@ -62,19 +77,19 @@ $categorias = explode(',', $libro['categorias']);
             </div>
             <div class="envio">
                 <img src="./img/iconos/envio.svg" alt="Icono de un camion" width="30px">
-                <p>Envio en 24/48 horas laborales</p>
+                <p>Envío en 24/48 horas laborales</p>
             </div>
             <div class="recogida">
                 <img src="./img/iconos/recogida.svg" alt="Icono de una tienda" width="30px">
-                <p>Recogida gratutita en todas nuestras tiendas</p>
+                <p>Recogida gratuita en todas nuestras tiendas</p>
             </div>
         </div>
       </section>
       <section class="fichaTecnica">
-        <h2>Ficha Tecnica</h2>
+        <h2>Ficha Técnica</h2>
         <div class="ficha">
           <div class="numero-paginas infoFicha">
-            <h3>Numero de paginas:</h3>
+            <h3>Número de páginas:</h3>
             <p><?php echo $libro['numero_paginas'] ?></p>
           </div>
           <div class="idioma infoFicha">

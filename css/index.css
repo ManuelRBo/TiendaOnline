@@ -1,5 +1,6 @@
 /* Main */
 main{
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -43,15 +44,17 @@ main{
 
     & :first-child{
         margin-left: 40px;
-        width: 270px;
-        height: 380px;
 }
 }
 
 .mejor-libro{
-    background-color: #432800;
-    width: 190px;
-    height: 270px;
+    height: 280px;
+    transition: all 0.5s ease-in-out;
+
+    &:hover{
+        height: 380px;
+        transition: all 0.6s ease-in-out;
+    }
 }
 
 .estanteria{
@@ -94,7 +97,7 @@ main{
 
 .ultimos-libros{
     width: 100%;
-    max-width: 1095px;
+    padding: 20px;
     margin: auto;
     display: flex;
     overflow: auto;

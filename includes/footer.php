@@ -1,8 +1,16 @@
+<?php
+    /**
+     * Descripcion: Footer de la pagina
+     * Autor: Manuel Rodrigo Borriño
+     * Fecha: 21 de febrero del 2024
+     */
+?>
+
 <footer>
     <div class="contenedor-footer">
         <div class="suscribete">
-            <h3>Suscribete</h3>
-            <p>Introduce tu email para recibir las novedades de los ultimo libros</p>
+            <h3>Suscríbete</h3>
+            <p>Introduce tu email para recibir las novedades de los últimos libros</p>
             <form id="suscribete">
                 <input type="email" placeholder="Correo electrónico" name="email">
                 <input type="submit" value="Enviar">
@@ -13,9 +21,9 @@
         <div class="logo-contacto-redes">
             <div class="logo-footer">
                 <img src="./img/logo/logo-b&n.svg" alt="Logo de la tienda" width="90px">
-                <a href="#">Politica de Privacidad</a>
-                <a href="#">Politica de Cookies</a>
-                <p>Copyright &#169; 2024</p>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Política de Cookies</a>
+                <p>Copyright &#169; <?php echo (new DateTime())->format("Y")?></p>
             </div>
             <div class="contacto">
                 <h4>Contacto</h4>
@@ -29,8 +37,8 @@
                 </div>
             </div>
             <div class="navegacion">
-                <a href="<?php echo isset($_SESSION['usuario']) ? "#" : "autenticar.php"?>">Iniciar Sesion</a>
-                <a href="cesta.html">Carrito</a>
+                <a href="<?php echo isset($_SESSION['usuario']) ? "#" : "autenticar.php"?>">Iniciar Sesión</a>
+                <a href="cesta.html">Cesta</a>
             </div>
             <div class="redes">
                 <a href="#">

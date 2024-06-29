@@ -1,18 +1,30 @@
 <?php
+/** 
+ * Descripcion: Header de la tienda
+ * Autor: Manuel Rodrigo Borriño
+ * Fecha: 21 de febrero del 2024
+ */
+
 require_once('Clases/Autoload.php');
 if(isset($_SESSION['usuario'])){
+    // Si el usuario esta logueado se obtiene la cantidad de productos que tiene en la cesta
     $cantidad = Cesta::cantidadTotal($_SESSION['usuario']['id']);
     if(!isset($cantidad)){
+        //Si no tiene productos en la cesta se le asigna 0
         $cantidad = 0;
     }
 }else{
+    //Si el usuario no esta logueado se obtiene la cesta de la cookie
     if(isset($_COOKIE['cesta'])){
+        //Si la cesta existe se obtiene su contenido y se suman las cantidades
         $cesta = json_decode($_COOKIE['cesta'], true);
+        // Función de reducción para sumar las cantidades
         $sumarCantidades = function ($carry, $item) {
             return $carry + $item['cantidad'];
         };
         $cantidad = array_reduce($cesta, $sumarCantidades, 0);
     }else{
+        //Si no existe la cesta se le asigna 0
         $cantidad = 0;
     }
 }

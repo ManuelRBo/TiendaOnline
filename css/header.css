@@ -23,3 +23,41 @@ nav{
         transform: scale(1.1);
     }
 }
+
+.bienvenida{
+    position: relative;
+
+    & p{
+        position: absolute;
+        left: -20px;
+        top: 25px;
+        width: 70px;
+    }
+
+    & :hover{
+        transform: scale(1.1);
+    }
+}
+
+.cesta{
+    position: relative;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    & p{
+        display: grid;
+        place-items: center;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        margin: 0;
+        top: 20px;
+        right: -10px;
+        background-color: #a04e28;
+        color: white;
+        font-size: 0.8rem;
+        border-radius: 50%;
+    }
+}

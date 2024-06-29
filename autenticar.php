@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Descripcion: Pagina de autenticacion
+ * Autor: Manuel Rodrigo Borriño
+ * Fecha: 21 de febrero del 2024
+ */
+
 session_start();
 
 ?>
@@ -13,7 +20,8 @@ session_start();
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/autenticar.css" />
     <link rel="stylesheet" href="./css/libros.css" />
-    <title>Biblioteca</title>
+    <link rel="shortcut icon" href="./img/logo/logo-b&n.svg" type="image/x-icon">
+    <title>Auntenticar</title>
   </head>
   <body>
 
@@ -23,12 +31,12 @@ session_start();
 
     <main>
       <section class="iniciarSesion">
-        <h2>Iniciar Sesion</h2>
+        <h2>Iniciar Sesión</h2>
         <form action="./api/iniciarSesion.php" method="post" class="formulario" id="iniciarSesion">
           <input type="text" required placeholder="Usuario" name="usuario" value="<?php echo isset($_SESSION['errorIS']) ? $_SESSION['errorIS']['usuario'] : ''?>"/>
           <input type="password" required placeholder="Contraseña" name="contraseña" id="contraseñaIniciarSesion" value="<?php echo isset($_SESSION['errorIS']) ? $_SESSION['errorIS']['contraseña'] : ''?>"/>
           <img src="img/iconos/contraseñaOFF.svg" alt="" id="ojoIniciarSesion" width="20px">
-          <input type="submit" value="Iniciar Sesion" />
+          <input type="submit" value="Iniciar Sesión" />
         </form>
         <?php
           if(isset($_SESSION['errorIS'])){
@@ -59,6 +67,7 @@ session_start();
 
           <?php
             if(isset($_SESSION['errorRegistro']['errores'])){
+              //Mostrar errores
               foreach($_SESSION['errorRegistro']['errores'] as $error){
                 echo '<p class="error">'.$error.'</p>';
               }
